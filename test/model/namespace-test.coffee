@@ -1,4 +1,4 @@
-{ element, attr, text, parse } = require('../../src/cruftless')()
+{ element, attr, text, parse } = require('../../lib/cruftlesser')()
 
 describe 'cruftless namespaces', ->
 
@@ -15,7 +15,7 @@ describe 'cruftless namespaces', ->
         ),
         element('t:zaz').ns('http://foo.bar')
       )
-      expect(el.toXML()).toEqual('<foo><bar xmlns:t=\"http://foo.bar\" t:zaz=\"foo\"/><t:zaz/></foo>')
+      expect(el.toXML()).toEqual('<foo><bar xmlns:t=\"http://foo.bar\" t:zaz=\"foo\"/><t:zaz xmlns:t=\"http://foo.bar\"/></foo>')
 
 
   describe 'when parsing templates', ->

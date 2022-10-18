@@ -1,5 +1,5 @@
-{ parse } = require('../../src/cruftless')()
-XMLSerializer = require('xmldom').XMLSerializer
+{ parse } = require('../../lib/cruftlesser')()
+XMLSerializer = require('@xmldom/xmldom').XMLSerializer
 
 describe 'the builder', ->
 
@@ -83,7 +83,7 @@ describe 'the builder', ->
 
   it 'should handle CDATA', ->
     xml = '<foo><![CDATA[Bad <strong>stuff</strong>]]></foo>'
-    expect(parse(xml).toXML()).toEqual "<foo>Bad &lt;strong>stuff&lt;/strong></foo>"
+    expect(parse(xml).toXML()).toEqual "<foo>Bad &lt;strong&gt;stuff&lt;/strong&gt;</foo>"
 
   it 'should allow you to capture a nodeset', ->
     template = parse('<foo><?capture a?></foo>')

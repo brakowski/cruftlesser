@@ -1,4 +1,4 @@
-cruftless = require('../../src/cruftless')
+cruftless = require('../../lib/cruftlesser')
 { element, attr, text, parse } = cruftless()
 
 describe 'raw extraction', ->

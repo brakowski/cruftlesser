@@ -1,4 +1,4 @@
-{ element, attr, text } = require('../../src/cruftless')()
+{ element, attr, text } = require('../../lib/cruftlesser')()
 
 describe 'element', ->
 

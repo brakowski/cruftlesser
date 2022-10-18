@@ -1,20 +1,23 @@
 ```javascript --hide
-require("coffeescript/register");
-const format = require("xml-formatter");
-runmd.onRequire = function (path) {
-  if (path === "cruftless") {
-    return "./readme.cruftless.coffee";
+require('coffeescript/register');
+const format = require('xml-formatter');
+runmd.onRequire = function(path) {
+  if (path === 'cruftlesser') {
+    return './readme.cruftlesser.coffee';
   }
-};
+}
+;
 ```
+# ! This is a fork of the great cruftless library !
+
+This fork fixed a few vulnerabilities, since the original maintainer of the library does not seem to be active anymore. The original can still be found under:
+
+https://github.com/wspringer/cruftless
 
 # README
 
 An XML builder / parser that tries to ease the common cases, allowing you to quickly build a model from your document structure and get a builder / parser for free.
 
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/wspringer/cruftless/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/wspringer/cruftless/tree/master)
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/wspringer/cruftless.svg)](https://greenkeeper.io/)
 
 ## Yet another XML binding framework?
 
@@ -34,7 +37,7 @@ Cruftless builds a simplified metamodel of your XML document, and it's not based
 Then, using the builder API, Cruftless allows you to _build_ a model of your document like this:
 
 ```javascript --run simple
-const { element, attr, text } = require("cruftless")();
+const { element, attr, text } = require('cruftlesser')();
 
 let el = element("person").content(
   element("name").content(text().value("John Doe")),
@@ -87,7 +90,7 @@ let template = `<person>
   <age>{{age}}</age>
 </person>`;
 
-let { parse } = require("cruftless")();
+let { parse } = require('cruftlesser')();
 
 el = parse(template);
 console.log(el.toXML({ name: "Jane Doe", age: "18" }));
@@ -129,7 +132,7 @@ You can add your own value types to convert from and to the string literals
 included in the XML representation.
 
 ```javascript --run simple-2
-const { element, attr, text, parse } = require("cruftless")({
+const { element, attr, text, parse } = require('cruftlesser')({
   types: {
     zeroOrOne: {
       type: "boolean",
@@ -317,7 +320,7 @@ without the craziness.
 So based on the template above, this would give you the RelaxNG schema:
 
 ```javascript --run simple-2
-const { relaxng } = require("cruftless")();
+const { relaxng } = require('cruftlesser')();
 
 console.log(relaxng(template));
 ```

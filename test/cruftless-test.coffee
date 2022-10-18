@@ -7,7 +7,7 @@ describe 'template', ->
 
   it 'should allow you to customize the types', ->
     
-    { element, attr, text } = require('../src/cruftless')({
+    { element, attr, text } = require('../lib/cruftlesser')({
       types: { special }
     })      
 
@@ -18,7 +18,7 @@ describe 'template', ->
     expect(el.fromXML('<foo>False</foo>')).toEqual({ a: false })
     
   it 'should allow you to customize the types', ->    
-    { parse } = require('../src/cruftless')({
+    { parse } = require('../lib/cruftlesser')({
       types: { special }
     })      
     el = parse('<foo>{{a|special}}</foo>')

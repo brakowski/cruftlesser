@@ -1,6 +1,6 @@
-serializer = new(require('xmldom').XMLSerializer)
-di = new(require('xmldom').DOMImplementation)
-parser = new(require('xmldom').DOMParser)
+serializer = new(require('@xmldom/xmldom').XMLSerializer)
+di = new(require('@xmldom/xmldom').DOMImplementation)
+parser = new(require('@xmldom/xmldom').DOMParser)
 _ = require 'lodash'
 { identity } = require 'lodash'
 

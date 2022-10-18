@@ -1,4 +1,4 @@
-{ attr, element, text } = require('../../src/cruftless')()
+{ attr, element, text } = require('../../lib/cruftlesser')()
 
 describe 'the isSet method', ->
 

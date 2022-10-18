@@ -1,4 +1,4 @@
-cruftless = require('../../src/cruftless')
+cruftless = require('../../lib/cruftlesser')
 _ = require 'lodash'
 { element, attr, text, parse, capture, relaxng } = cruftless()
 

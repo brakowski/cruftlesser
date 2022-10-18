@@ -1,4 +1,4 @@
-accessor = require '../../src/expr/accessor'
+accessor = require '../../lib/expr/accessor'
 
 describe 'the accessor', ->
 

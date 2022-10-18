@@ -1,5 +1,5 @@
 format = require('xml-formatter')
-cruftless = require('./src/cruftless')
+cruftless = require('./src/cruftlesser')
 
 compact = (str) ->
   # str

@@ -1,4 +1,4 @@
-DOMParser = require('xmldom').DOMParser
+DOMParser = require('@xmldom/xmldom').DOMParser
 _ = require 'lodash'
 binding = require './binding'
 curlyNS = 'https://github.com/wspringer/cruftless'

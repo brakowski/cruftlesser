@@ -1,4 +1,4 @@
-parse = require '../../src/expr/parse'
+parse = require '../../lib/expr/parse'
 
 describe 'the expression parser', ->
 

@@ -1,5 +1,4 @@
-cruftless = require('../../src/cruftless')
-
+cruftless = require('../../lib/cruftlesser')
 { parse } = cruftless()
 
 describe 'the relaxng support', ->

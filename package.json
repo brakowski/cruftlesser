@@ -1,6 +1,6 @@
 {
-  "name": "cruftless",
-  "version": "1.2.1",
+  "name": "cruftlesser",
+  "version": "1.0.0",
   "description": "Yet another simple way to parse and generate XML",
   "main": "lib/cruftless.js",
   "types": "./cruftless.d.ts",
@@ -9,26 +9,32 @@
     "cruftless.d.ts"
   ],
   "scripts": {
-    "test": "jest",
+    "test": "npm run compile:test && jest",
     "watch:test": "jest --watch",
     "prepare": "coffee -c -o ./lib ./src",
-    "compile:test": "coffee -c -o ./build/test ./test",
+    "compile:test": "coffee -c -o ./build_test ./test",
     "readme": "runmd --output=./README.md ./README.js.md"
   },
-  "repository": "github:wspringer/cruftless",
+  "repository": "github:brakowski/cruftlesser",
   "author": "Wilfred Springer",
+  "contributors": [
+    "Alexander Brakowski"
+  ],
   "license": "MIT",
   "dependencies": {
-    "xmldom": "0.6.0"
+    "@xmldom/xmldom": "^0.8.3",
+    "lodash": "^4.17.21"
   },
   "jest": {
-    "preset": "jest-preset-coffeescript"
+    "verbose": false,
+    "rootDir": "./build_test",
+    "moduleFileExtensions": ["js", "json"],
+    "testMatch": ["<rootDir>/**/*@(test|spec)?(s){/**/,}*.js"]
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.1",
-    "coffeescript": "^2.4.1",
-    "jest": "^24.9.0",
-    "jest-preset-coffeescript": "^1.1.1",
+    "coffeescript": "^2.5.1",
+    "jest": "^29.2.1",
     "runmd": "^1.0.1",
     "xml-formatter": "^2.1.0"
   }
