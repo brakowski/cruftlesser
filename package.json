@@ -21,14 +21,19 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@xmldom/xmldom": "^0.8.3",
+    "@xmldom/xmldom": "^0.8.4",
     "lodash": "^4.17.21"
   },
   "jest": {
     "verbose": false,
     "rootDir": "./build_test",
-    "moduleFileExtensions": ["js", "json"],
-    "testMatch": ["<rootDir>/**/*@(test|spec)?(s){/**/,}*.js"]
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "testMatch": [
+      "<rootDir>/**/*@(test|spec)?(s){/**/,}*.js"
+    ]
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.1",
