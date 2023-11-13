@@ -1,12 +1,13 @@
 {
   "name": "cruftlesser",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Yet another simple way to parse and generate XML",
   "main": "lib/cruftlesser.js",
   "files": [
     "lib/",
     "cruftless.d.ts"
   ],
+  "types": "./cruftlesser.d.ts",
   "scripts": {
     "test": "npm run compile:test && jest",
     "watch:test": "jest --watch",
