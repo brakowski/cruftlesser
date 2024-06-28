@@ -1,5 +1,5 @@
-{ element, attr, text, parse } = require('../../src/cruftless')()
-{ DOMImplementation } = require('xmldom')
+{ element, attr, text, parse } = require('../../lib/cruftlesser')()
+{ DOMImplementation } = require('@xmldom/xmldom')
 
 describe 'attributes', ->
 

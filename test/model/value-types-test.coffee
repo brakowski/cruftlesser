@@ -1,4 +1,4 @@
-{ element, attr, text, parse } = require('../../src/cruftless')({
+{ element, attr, text, parse } = require('../../lib/cruftlesser')({
   types: {
     zeroOrOne: {
       type: "boolean",

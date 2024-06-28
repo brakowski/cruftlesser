@@ -1,9 +1,9 @@
-{ parse, attr, element, text } = require('../../src/cruftless')({
+{ parse, attr, element, text } = require('../../lib/cruftlesser')({
   prefixes: {
     ase: 'http://foo.bar/'
   }
 })
-{ xsiNS } = require '../../src/ns'
+{ xsiNS } = require '../../lib/ns'
 
 
 describe 'xsi:type support', ->
