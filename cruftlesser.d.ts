@@ -67,7 +67,7 @@ declare module "cruftlesser" {
   export type Attr = any;
   export type Text = any;
 
-  function cruftlesser(opts: CruftlessOpts): Cruftless;
+  function cruftlesser(opts?: CruftlessOpts): Cruftless;
 
   export default cruftlesser;
 }
